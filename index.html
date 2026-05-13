@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexBank | Modern Finance</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-bolt-lightning"></i>
+                <span>NexBank</span>
+            </div>
+            <nav>
+                <div class="nav-item active"><i class="fa-solid fa-house"></i> Overview</div>
+                <div class="nav-item"><i class="fa-solid fa-wallet"></i> Accounts</div>
+                <div class="nav-item"><i class="fa-solid fa-chart-line"></i> Investing</div>
+                <div class="nav-item"><i class="fa-solid fa-credit-card"></i> Cards</div>
+                <div class="nav-item"><i class="fa-solid fa-user"></i> Profile</div>
+            </nav>
+            <div class="upgrade-card">
+                <p>Go Premium for better rates</p>
+                <button>Upgrade Now</button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search transactions...">
+                </div>
+                <div class="header-actions">
+                    <i class="fa-solid fa-bell"></i>
+                    <div class="user-avatar">
+                        <img src="https://i.pravatar.cc/40" alt="User">
+                    </div>
+                </div>
+            </header>
+
+            <section class="summary-grid">
+                <div class="stat-card balance">
+                    <p>Total Balance</p>
+                    <h2>₹12,45,250.00</h2>
+                    <span class="trend up">+2.4% this month</span>
+                </div>
+                <div class="stat-card spending">
+                    <p>Monthly Spending</p>
+                    <h2>₹45,200.00</h2>
+                    <div class="progress-mini"><div class="fill" style="width: 65%;"></div></div>
+                </div>
+                <div class="stat-card saving">
+                    <p>Total Savings</p>
+                    <h2>₹3,10,000.00</h2>
+                    <span class="trend up">+₹5,000 added</span>
+                </div>
+            </section>
+
+            <section class="transactions">
+                <div class="section-header">
+                    <h3>Recent Transactions</h3>
+                    <a href="#">See All</a>
+                </div>
+                <div class="transaction-list">
+                    <div class="tx-item">
+                        <div class="icon shopping"><i class="fa-solid fa-bag-shopping"></i></div>
+                        <div class="details">
+                            <h4>Amazon India</h4>
+                            <p>Shopping • 12 May 2024</p>
+                        </div>
+                        <div class="amount negative">-₹2,499.00</div>
+                    </div>
+                    <div class="tx-item">
+                        <div class="icon salary"><i class="fa-solid fa-building"></i></div>
+                        <div class="details">
+                            <h4>TechCorp Pvt Ltd</h4>
+                            <p>Salary • 01 May 2024</p>
+                        </div>
+                        <div class="amount positive">+₹1,20,000.00</div>
+                    </div>
+                    <div class="tx-item">
+                        <div class="icon food"><i class="fa-solid fa-utensils"></i></div>
+                        <div class="details">
+                            <h4>Zomato</h4>
+                            <p>Food • 10 May 2024</p>
+                        </div>
+                        <div class="amount negative">-₹450.00</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

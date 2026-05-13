@@ -1,0 +1,199 @@
+:root {
+    --primary: #4361ee;
+    --secondary: #3f37c9;
+    --success: #4cc9f0;
+    --danger: #f72585;
+    --bg: #f8f9fa;
+    --text-dark: #212529;
+    --text-gray: #6c757d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text-dark);
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    background: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #eee;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 50px;
+}
+
+nav {
+    flex: 1;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    color: var(--text-gray);
+    transition: all 0.3s;
+}
+
+.nav-item.active {
+    background-color: var(--primary);
+    color: white;
+}
+
+.nav-item:hover:not(.active) {
+    background-color: #f0f4ff;
+    color: var(--primary);
+}
+
+.upgrade-card {
+    background: #eef2ff;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.upgrade-card button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 30px 50px;
+    overflow-y: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.search-box {
+    background: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.user-avatar img {
+    border-radius: 50%;
+}
+
+/* Summary Grid */
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.stat-card p { color: var(--text-gray); font-size: 0.9rem; margin-bottom: 10px; }
+.stat-card h2 { font-size: 1.8rem; margin-bottom: 15px; }
+
+.trend { font-size: 0.8rem; font-weight: 700; }
+.trend.up { color: #2ecc71; }
+
+.progress-mini { height: 6px; background: #eee; border-radius: 3px; }
+.progress-mini .fill { height: 100%; background: var(--primary); border-radius: 3px; }
+
+/* Transactions */
+.transactions {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.tx-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #f8f9fa;
+}
+
+.tx-item:last-child { border: none; }
+
+.icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.icon.shopping { background: #fff1f2; color: #f43f5e; }
+.icon.salary { background: #f0fdf4; color: #22c55e; }
+.icon.food { background: #fff7ed; color: #f97316; }
+
+.details { flex: 1; }
+.details h4 { font-size: 1rem; margin-bottom: 4px; }
+.details p { font-size: 0.85rem; color: var(--text-gray); }
+
+.amount { font-weight: 700; }
+.amount.positive { color: #22c55e; }
+.amount.negative { color: #f43f5e; }
